@@ -1,3 +1,7 @@
-.home{
-    color: black;
+.home {
+    display: flex;
+    .home-container {
+        flex: 2;
+        
+    }
 }
