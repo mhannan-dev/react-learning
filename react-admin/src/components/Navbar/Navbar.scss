@@ -1,3 +1,45 @@
-.navbar{
-    color: rgb(3, 68, 36);
+.navbar {
+    color: #fff;
+    padding: 10px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background-color: rebeccapurple; 
+        width: 100%;
+
+        .search {
+            display: flex;
+            align-items: center;
+
+            input {
+                padding: 5px;
+                margin-right: 10px;
+                border: none;
+                border-radius: 3px;
+            }
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+
+            .item {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                cursor: pointer;
+                transition: color 0.3s ease-in-out;
+
+                &:hover {
+                    color: #00AB6C;
+                }
+
+                svg {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
 }
