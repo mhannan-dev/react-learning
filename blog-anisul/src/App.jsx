@@ -4,8 +4,9 @@ function App() {
   return (
     <>
       <h1 className="mainHeading">Todo App</h1>
-      {Data.map((item) => (
+      {Data.map((item, index) => (
         <Card
+          key={index}
           cardTitle={item.title}
           cardSubTitle={item.subTitle}
           footerText={item.footerText}
