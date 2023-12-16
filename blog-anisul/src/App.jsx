@@ -1,18 +1,26 @@
-import Card from "./components/Card";
-import Data from "./data.json";
-function App() {
+export default function App() {
+  const peopleArr = [
+    { id: 1, name: "Alice", nestedArr: ["dog", "cat"] },
+    { id: 2, name: "Bob", nestedArr: ["turtle", "rabbit"] },
+    { id: 3, name: "Carl", nestedArr: ["hamster", "parrot"] },
+  ];
   return (
-    <>
-      <h1 className="mainHeading">Todo App</h1>
-      {Data.map((item, index) => (
-        <Card
-          key={index}
-          cardTitle={item.title}
-          cardSubTitle={item.subTitle}
-          footerText={item.footerText}
-        />
-      ))}
-    </>
+    <div>
+      {peopleArr.map((person, index) => {
+        return (
+          <div key={index}>
+            <h2>Name: {person.name}</h2>
+            {person.nestedArr.map((pet, index) => {
+              return (
+                <div key={index}>
+                  <h2>Pet: {pet}</h2>
+                </div>
+              );
+            })}
+            <hr />
+          </div>
+        );
+      })}
+    </div>
   );
 }
-export default App;
