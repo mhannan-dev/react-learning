@@ -1,14 +1,24 @@
-function Card(props) {
+
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+
+function CardComponent(props) {
   const { cardTitle, cardSubTitle, footerText } = props;
   return (
     <>
-      <div className="card">
-        <h3 className="heading">{cardTitle}</h3>
-        <p className="desc">{cardSubTitle}</p>
-        <p className="footerText strong">{footerText}</p>
-      </div>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img variant="top" src="https://goodmockups.com/wp-content/uploads/2019/08/Free-Plastic-Credit-Debit-Card-Mockup-PSD-3.jpg" />
+        <Card.Body>
+          <Card.Title>Card Title</Card.Title>
+          <Card.Text>
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </Card.Text>
+          <Button variant="primary">Go somewhere</Button>
+        </Card.Body>
+      </Card>
     </>
   );
 }
 
-export default Card;
+export default CardComponent;
