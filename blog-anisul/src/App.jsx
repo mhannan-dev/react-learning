@@ -1,26 +1,20 @@
-export default function App() {
-  const peopleArr = [
-    { id: 1, name: "Alice", nestedArr: ["dog", "cat"] },
-    { id: 2, name: "Bob", nestedArr: ["turtle", "rabbit"] },
-    { id: 3, name: "Carl", nestedArr: ["hamster", "parrot"] },
-  ];
+import Card from "./components/Card";
+import Data from "./data.json";
+import { v4 as uuidv4 } from 'uuid';
+import { FaAdn } from "react-icons/fa6";
+function App() {
   return (
-    <div>
-      {peopleArr.map((person, index) => {
-        return (
-          <div key={index}>
-            <h2>Name: {person.name}</h2>
-            {person.nestedArr.map((pet, index) => {
-              return (
-                <div key={index}>
-                  <h2>Pet: {pet}</h2>
-                </div>
-              );
-            })}
-            <hr />
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h1 className="mainHeading"><FaAdn /> Todo App</h1>
+      {Data.map((item, index) => (
+        <Card
+          key={uuidv4()}
+          cardTitle={item.title}
+          cardSubTitle={item.subTitle}
+          footerText={item.footerText}
+        />
+      ))}
+    </>
   );
 }
+export default App;
