@@ -1,0 +1,30 @@
+/* Form.module.css */
+
+.formContainer {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .formLabel {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: 1px solid #58a8fd;
+
+  }
+  
+  .formButton {
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
