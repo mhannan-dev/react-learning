@@ -46,6 +46,7 @@ const NewTodo = (props) => {
         }
     };
 
+    
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -94,7 +95,7 @@ const NewTodo = (props) => {
 
                 <ToastContainer
                     position="top-right"
-                    autoClose={3000} 
+                    autoClose={1500} 
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick

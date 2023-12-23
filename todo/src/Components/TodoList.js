@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import Todo from './Todo';
 
 const TodoList = (props) => {
   return (
     <section>
       {props.todoList.map(todo => (
-        <Todo todo={todo} key={todo.id}/>
+        <Todo key={todo.id} todo={todo} onDelete={props.onDelete} />
       ))}
     </section>
   )
 }
 
-export default TodoList
+export default TodoList;
