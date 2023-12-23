@@ -65,11 +65,14 @@ const NewTodo = (props) => {
             });
             return;
         }
-
-        // Generate a unique ID for the new todo using uuid
         const newTodo = { ...todo, id: uuidv4() };
-        props.onAddProps(newTodo); // Pass the new todo to the onAddProps function
+        props.onAddProps(newTodo);
         setTodo({ title: "", description: "" });
+        toast.success("Todo added successfully!", {
+            position: toast.POSITION.TOP_RIGHT,
+            className: 'green-toast'
+        });
+
     };
 
     const toastStyle = { position: "fixed", top: "10px", right: "10px", color: "red" };
