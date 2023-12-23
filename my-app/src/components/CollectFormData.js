@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import styles from './Form.module.css';
 
 const CollectFormData = () => {
@@ -8,18 +8,18 @@ const CollectFormData = () => {
     phone: '',
   });
 
-  const handleInputChange = (e) => {
+  const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-  };
+  }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
-    console.log('Form Data:', formData);
-  };
+    console.log('Data:', formData);
+  }, [formData]);
 
   return (
     <div className={styles.formContainer}>

@@ -1,8 +1,8 @@
 // Parent.jsx
 import React, { useState } from 'react';
-import Child from './components/STATE_LIFTING/Child';
+import Child from './Child';
 
-const App = () => {
+const Parent = () => {
   const [dataFromChild, setDataFromChild] = useState(null);
   const handleDataFromChild = (data) => {
     console.log('Data from child:', data);
@@ -18,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Parent;
