@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -53,7 +52,7 @@ const NewTodo = (props) => {
         if (!todo.title.trim()) {
             toast.error("Please fill in the title.", {
                 position: toast.POSITION.TOP_RIGHT,
-                className: 'red-toast'  // Custom class for styling
+                className: 'red-toast'
             });
             return;
         }
@@ -61,7 +60,7 @@ const NewTodo = (props) => {
         if (!todo.description.trim()) {
             toast.error("Please fill in the description.", {
                 position: toast.POSITION.TOP_RIGHT,
-                className: 'red-toast'  // Custom class for styling
+                className: 'red-toast'
             });
             return;
         }
@@ -74,9 +73,7 @@ const NewTodo = (props) => {
         });
 
     };
-
     const toastStyle = { position: "fixed", top: "10px", right: "10px", color: "red" };
-
     return (
         <div className="p-3 mb-2 bg-light text-dark border">
             <form onSubmit={handleSubmit}>
