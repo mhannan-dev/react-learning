@@ -1,54 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import CountryCard from './CountryCard';
 
 const CountryList = () => {
-    return (
-        <>
-            <div className="country-list">
-                <div className="row mt-2">
-                    <div className="col-md-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Country name</h5>
-                                <p className="card-text">Some quick example text...</p>
-                                <p className="card-text">Some more example text...</p>
-                                <button className="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Country name</h5>
-                                <p className="card-text">Some quick example text...</p>
-                                <p className="card-text">Some more example text...</p>
-                                <button className="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Country name</h5>
-                                <p className="card-text">Some quick example text...</p>
-                                <p className="card-text">Some more example text...</p>
-                                <button className="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-3">
-                        <div className="card">
-                            <div className="card-body">
-                                <h5 className="card-title">Country name</h5>
-                                <p className="card-text">Some quick example text...</p>
-                                <p className="card-text">Some more example text...</p>
-                                <button className="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </>
-    )
-}
+    const [loading, setLoading] = useState(true);
+    const [countries, setCountries] = useState([]);
 
-export default CountryList
+    useEffect(() => {
+        // Simulate loading for 2 seconds
+        const timeoutId = setTimeout(() => {
+            fetch('https://restcountries.com/v3.1/all')
+                .then((response) => response.json())
+                .then((data) => {
+                    setCountries(data);
+                    setLoading(false);
+                })
+                .catch((error) => {
+                    console.error('Error fetching data:', error);
+                    setLoading(false);
+                });
+        }, 1000);
+        return () => clearTimeout(timeoutId);
+    }, []);
+
+    return (
+        <div className="country-list">
+            {loading ? (
+                <p>Loading...</p>
+            ) : (
+                <div className="row mt-2">
+                    {countries.map((country, index) => (
+                        <CountryCard key={index} country={country} />
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+};
+
+export default CountryList;
