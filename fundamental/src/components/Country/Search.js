@@ -1,7 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-const Search = () => {
-  return (
+const Search = ({ onSearch }) => {
+  const [searchTerm, setSearchTerm ] =  useState();
+  const handleChange = (e) => {
+    const value = e.target.value;
+    console.log(value);
+    setSearchTerm(value);
+    onSearch(value);
+  }
+    return (
     <>
       <div className="app-header d-flex justify-content-between">
         <div className="app-heading">
@@ -12,6 +19,9 @@ const Search = () => {
             type="text"
             className="form-control"
             placeholder="Search by country name"
+            value={searchTerm}
+            onChange={handleChange}
+
           />
         </div>
       </div>
