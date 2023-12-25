@@ -21,7 +21,6 @@ const Search = ({ onSearch }) => {
             placeholder="Search by country name"
             value={searchTerm}
             onChange={handleChange}
-
           />
         </div>
       </div>
