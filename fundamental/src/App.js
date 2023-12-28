@@ -1,11 +1,11 @@
 // Parent.jsx
 import React, { useState } from 'react';
-import Home from './components/Country/Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './components/Ecommerce/Home';
 const App = () => {
   return (
     <div>
-      <Home />
+       <Home/>
     </div>
   );
 };
