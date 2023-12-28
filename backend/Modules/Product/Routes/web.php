@@ -1,5 +1,7 @@
 <?php
 
+use Modules\Product\Http\Controllers\CategoryController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,8 @@
 |
 */
 
-Route::prefix('product')->group(function() {
-    Route::get('/', 'ProductController@index');
+Route::group(['prefix' => 'catalogue', 'as' => 'catalogue.'], function () {
+    Route::resources([
+        'category' => CategoryController::class,
+    ]);
 });

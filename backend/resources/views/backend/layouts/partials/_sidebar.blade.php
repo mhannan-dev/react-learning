@@ -76,6 +76,34 @@
                         @endif
                     </ul>
                 </li>
+                
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-edit"></i>
+                        <p>
+                            Catalogue
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        @if ($user->can('category.view'))
+                            <li class="nav-item">
+                                <a href="{{ route('catalogue.category.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Category</p>
+                                </a>
+                            </li>
+                        @endif
+                        @if ($user->can('brand.view'))
+                            <li class="nav-item">
+                                <a href="{{ route('catalogue.brand.index') }}" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Brand</p>
+                                </a>
+                            </li>
+                        @endif
+                    </ul>
+                </li>
 
                 <li class="nav-item">
                     <a href="#" class="nav-link">
