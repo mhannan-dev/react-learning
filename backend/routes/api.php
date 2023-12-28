@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\GeneralController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::group(['as' => 'api.'], function () {
+    Route::controller(GeneralController::class)->group(function () {
+        Route::get('category', 'getCategory')->name('category');
+        Route::get('brand', 'getBrand')->name('category');
+    });
+});

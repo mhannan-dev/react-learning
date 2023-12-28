@@ -6,6 +6,7 @@ use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 use Modules\Product\Database\Seeders\BrandsTableSeeder;
 use Modules\Product\Database\Seeders\BannersTableSeeder;
+use Modules\Product\Database\Seeders\ProductTableSeeder;
 use Modules\Product\Database\Seeders\SectionsTableSeeder;
 use Modules\Product\Database\Seeders\CategoriesTableSeeder;
 
@@ -25,6 +26,7 @@ class ProductDatabaseSeeder extends Seeder
             SectionsTableSeeder::class,
             BrandsTableSeeder::class,
             BannersTableSeeder::class,
+            ProductTableSeeder::class,
         ]);
     }
 }
