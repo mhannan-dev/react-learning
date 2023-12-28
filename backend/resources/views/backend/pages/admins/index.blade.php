@@ -102,8 +102,6 @@ Admins - Admin Panel
     </div>
 </div>
 @endsection
-
-
 @section('scripts')
      <!-- Start datatable js -->
      <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>

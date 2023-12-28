@@ -44,7 +44,7 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`id`, `name`, `email`, `username`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Super Admin', 'sadmin@example.com', 'sadmin', NULL, '$2y$10$04D4VxiS5fbr8ll6towqjeTK21rP8MHxERjgpTeES5rdLD0c9bIsi', NULL, '2020-09-11 22:33:43', '2020-09-11 22:33:43'),
+(1, 'Super Admin', 'admin@example.com', 'admin', NULL, '$2y$10$04D4VxiS5fbr8ll6towqjeTK21rP8MHxERjgpTeES5rdLD0c9bIsi', NULL, '2020-09-11 22:33:43', '2020-09-11 22:33:43'),
 (2, 'Admin', 'admin@gmail.com', 'admin', NULL, '$2y$10$.7HeNIXmdognq7i3eQ8YzOg/EXqzrJsSB0BqfXQBa8iB86JClmCs2', NULL, '2020-09-20 10:35:35', '2020-09-20 10:35:35'),
 (3, 'Client', 'client@example.com', 'client', NULL, '$2y$10$Nf4rahrK4DohTyAPdJWGeuEHddulfF0D3bANvI9mLNT7svLT88Pge', NULL, '2020-09-20 10:45:00', '2020-09-20 10:45:00'),
 (4, 'Test Admin', 'test@gmail.com', 'test', NULL, '$2y$10$i8mt.IzUxq9mq/3euOJ8E.CF7gprJCVNyV.mR8Vdn2LQgcLo/8kCi', NULL, '2020-09-25 13:18:32', '2020-09-25 13:18:32');
@@ -195,7 +195,7 @@ CREATE TABLE `roles` (
 --
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
-(1, 'sadmin', 'admin', '2020-07-25 10:43:33', '2020-07-25 10:43:33'),
+(1, 'admin', 'admin', '2020-07-25 10:43:33', '2020-07-25 10:43:33'),
 (6, 'Admin', 'admin', '2020-08-13 09:44:25', '2020-08-14 02:10:53'),
 (7, 'Client', 'admin', '2020-09-20 10:44:27', '2020-09-20 10:44:27'),
 (8, 'Test Role', 'admin', '2020-09-25 13:17:53', '2020-09-25 13:17:53');

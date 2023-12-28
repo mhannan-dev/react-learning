@@ -4,7 +4,7 @@ A project which manage Role, Permissions and every actions of your Laravel appli
 
 **Live Demo:** http://laravel-role.herokuapp.com
 ```
-Username - sadmin
+Username - admin
 password - 12345678
 ```
 > **Note:** Don't try to modify the Super Admin (Role & admin) data, just for Heroku deployment.
@@ -63,7 +63,7 @@ So, You've got the project of Laravel Role & Permission Management on your http:
 
 ## How it works
 1. Login using Super Admin Credential -
-    1. Username - `sadmin`
+    1. Username - `admin`
     1. Password - `12345678`
 2. Create Admin
 3. Create Role
