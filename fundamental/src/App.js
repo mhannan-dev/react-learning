@@ -1,41 +1,24 @@
 // App.js
 import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Users from './components/User/Users';
-import NewUser from './components/User/NewUser';
-import { UsersContext } from './components/Context/UsersContext';
-import { TodoProvider } from './components/Context_Api_Todo/TodoContext';
-import TodoForm from './components/Context_Api_Todo/TodoForm';
-import TodoList from './components/Context_Api_Todo/TodoList';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
+import Blogs from './pages/Blogs';
+import Error from './pages/Error404';
+import Navbar from './components/Navbar';
 
 const App = () => {
-  const [users, setUsers] = useState([
-    { id: 5, username: "John Doe" },
-    { id: 6, username: "Jane Doe" },
-    { id: 7, username: "Alice" },
-    { id: 8, username: "Bob" },
-    { id: 9, username: "Charlie" },
-    { id: 10, username: "Eve" },
-  ]);
-
-  const handleAddUser = (newUser) => {
-    setUsers((prevUser) => [...prevUser, newUser]);
-  };
-
   return (
-    // <UsersContext.Provider value={{ users, setUsers }}>
-    //   <div className='container'>
-    //     <NewUser/>
-    //     <Users/>
-    //   </div>
-    // </UsersContext.Provider>
-    <div className='container'>
-      <TodoProvider>
-        <h1>Todo App</h1>
-        <TodoForm />
-        <TodoList />
-      </TodoProvider>
-    </div >
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={ <Home/> }/>
+        <Route path="/about" element={ <About/> }/>
+        <Route path="/blogs" element={ <Blogs/> }/>
+        <Route path="/*" element={ <Error/> }/>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
