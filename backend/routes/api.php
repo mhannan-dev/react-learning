@@ -17,7 +17,8 @@ use App\Http\Controllers\Api\GeneralController;
 
 Route::group(['as' => 'api.'], function () {
     Route::controller(GeneralController::class)->group(function () {
-        Route::get('category', 'getCategory')->name('category');
-        Route::get('brand', 'getBrand')->name('category');
+        Route::get('category', 'getCategory');
+        Route::get('brand', 'getBrand');
+        Route::get('products/{selectedCategoryId?}', 'getProducts');
     });
 });

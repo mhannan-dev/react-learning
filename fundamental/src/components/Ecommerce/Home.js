@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <div className='container'>
       <Header/>
-      <StaticBanner/>
       <Categories/>
       <Products/>
     </div>

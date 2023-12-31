@@ -1,17 +1,25 @@
-import React from 'react'
+// CategorySingle.js
+import React from 'react';
 
-const CategorySingle = ({category}) => {
-    // console.log("category",category);
-    return (
-        <>
-            <div className='col-md-2'>
-                <a href='#' className='text-decoration-none'>
-                    <img variant="top" src={category.image} width="150" />
-                    <h6 className='py-2'>{ category.title }</h6>
-                </a>
-            </div>
-        </>
-    )
-}
+const CategorySingle = ({ category, onCategorySelect }) => {
+  const handleClick = () => {
+    onCategorySelect(category.id);
+  };
 
-export default CategorySingle
+  return (
+    <>
+      <div className='col-md-2'>
+        <button
+          type='button'
+          className='btn btn-link text-decoration-none'
+          onClick={handleClick}
+        >
+          <img src={category.image} alt={`Category: ${category.title}`} width='150' />
+          <h6 className='py-2'>{category.title}</h6>
+        </button>
+      </div>
+    </>
+  );
+};
+
+export default CategorySingle;

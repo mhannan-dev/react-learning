@@ -39,6 +39,14 @@ const Header = () => {
                 </a>
               </li>
             </ul>
+            <form className="d-flex">
+              <input
+                className="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
             <span className="navbar-text">
               <button className="btn btn-outline-primary">
                 <FaCartArrowDown /> Cart <span className={styles['cart-qty']}>0</span>
