@@ -4,6 +4,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Users from './components/User/Users';
 import NewUser from './components/User/NewUser';
 import { UsersContext } from './components/Context/UsersContext';
+import { TodoProvider } from './components/Context_Api_Todo/TodoContext';
+import TodoForm from './components/Context_Api_Todo/TodoForm';
+import TodoList from './components/Context_Api_Todo/TodoList';
 
 const App = () => {
   const [users, setUsers] = useState([
@@ -20,12 +23,19 @@ const App = () => {
   };
 
   return (
-    <UsersContext.Provider value={{ users, setUsers }}>
-      <div className='container'>
-        <NewUser/>
-        <Users/>
-      </div>
-    </UsersContext.Provider>
+    // <UsersContext.Provider value={{ users, setUsers }}>
+    //   <div className='container'>
+    //     <NewUser/>
+    //     <Users/>
+    //   </div>
+    // </UsersContext.Provider>
+    <div className='container'>
+      <TodoProvider>
+        <h1>Todo App</h1>
+        <TodoForm />
+        <TodoList />
+      </TodoProvider>
+    </div >
   );
 };
 
