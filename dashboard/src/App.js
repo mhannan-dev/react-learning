@@ -3,9 +3,10 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { FiSettings } from 'react-icons/fi';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import './App.css';
-
 import Footer from './components/Footer';
-import { Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor, Ecommerce } from './pages';
+
+import { Orders, Calendar, Employees, Stacked, Pyramid, Customers, Kanban, Line, Area, Bar, Pie, Financial, ColorPicker, ColorMapping, Editor} from './pages';
+import ECommerce from './pages/ECommerce';
 
 const App = () => {
   const activeMenu = true;
@@ -44,7 +45,7 @@ const App = () => {
             </div>
             <div>
               <Routes>
-                <Route path="/about" element={<Ecommerce />} />
+                <Route path="/about" element={<ECommerce />} />
                 <Route path="/contact" element={<Orders />} />
                 <Route path="/product" element={<Employees />} />
                 <Route path="/services" element={<Customers />} />
