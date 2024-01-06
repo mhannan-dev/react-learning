@@ -2,9 +2,9 @@ import React from 'react'
 
 const Customers = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Customers</h1>
+    </>
   )
 }
 

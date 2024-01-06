@@ -2,9 +2,9 @@ import React from 'react'
 
 const ColorPicker = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Color picker</h1>
+    </>
   )
 }
 

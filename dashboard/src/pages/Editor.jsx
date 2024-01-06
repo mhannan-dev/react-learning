@@ -2,9 +2,9 @@ import React from 'react'
 
 const Editor = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Editor</h1>
+    </>
   )
 }
 

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Calendar = () => {
   return (
-    <div>
-      
-    </div>
+    <>
+      <h1>Calendar</h1>
+    </>
   )
 }
 
