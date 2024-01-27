@@ -1,0 +1,14 @@
+.testimonial-image {
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial-image:hover {
+    border-color: #1F2937;
+    transform: scale(1.06);
+}
+
+.text-spacing {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
