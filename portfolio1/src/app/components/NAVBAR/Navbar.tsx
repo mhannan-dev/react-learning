@@ -19,7 +19,7 @@ const Navbar = () => {
             <li><a href="#" className="text-white hover:text-gray-200">Services</a></li>
             <li><a href="#" className="text-white hover:text-gray-200">Contact</a></li>
           </ul>
-          <button className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out">Contact Me</button>
+          <button className="bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow hover:from-blue-600 hover:to-blue-700 transition duration-300 ease-in-out transform hover:scale-105 border border-slate-300 hover:border-indigo-300">Contact Me</button>
         </div>
       </div>
     </nav>

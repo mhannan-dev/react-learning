@@ -43,8 +43,8 @@ const Testimonial = () => {
                     <h6 className="text-2xl font-bold text-gray-800 mb-4">CLIENT REVIEWS OF MY WORK</h6>
                     <h2 className="text-2xl font-bold mb-4 pb-8"><span className={styles.testimonialHeading}>Testimonials</span></h2>
                 </header>
-                <div className="flex justify-center items-center">
-                    <div className="w-3/4 bg-white shadow-lg overflow-hidden rounded-lg  p-8">
+                <div className="flex flex-col md:flex-row justify-center items-center">
+                    <div className="w-full md:w-3/4 bg-white shadow-lg overflow-hidden rounded-lg p-8 mb-4 md:mb-0 md:mr-4">
                         <TestimonialItems testimonials={[testimonials[currentIndex]]} />
                     </div>
                     <div className="flex items-center justify-center">
