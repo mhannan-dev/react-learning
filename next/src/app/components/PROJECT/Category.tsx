@@ -1,10 +1,15 @@
-// FilterButtons.js
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const FilterButtons = ({ filterOptions, onFilterChange }) => {
+interface CategoryButtonsProps {
+  filterOptions: string[];
+  onFilterChange: (filter: string) => void;
+}
+
+const CategoryButtons: React.FC<CategoryButtonsProps> = ({ filterOptions, onFilterChange }) => {
   const [selectedFilter, setSelectedFilter] = useState('All');
 
-  const handleFilterChange = (filter) => {
+  const handleFilterChange = (filter: string) => {
     setSelectedFilter(filter);
     onFilterChange(filter);
   };
@@ -31,4 +36,9 @@ const FilterButtons = ({ filterOptions, onFilterChange }) => {
   );
 };
 
-export default FilterButtons;
+CategoryButtons.propTypes = {
+  filterOptions: PropTypes.arrayOf(PropTypes.string).isRequired,
+  onFilterChange: PropTypes.func.isRequired,
+};
+
+export default CategoryButtons;
