@@ -6,7 +6,6 @@ const Logo = () => {
     <Image
       src="/profile.png"
       alt="Logo"
-      className="dark:invert"
       width={100}
       height={24}
       priority

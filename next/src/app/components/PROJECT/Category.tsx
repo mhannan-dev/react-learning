@@ -17,7 +17,7 @@ const CategoryButtons: React.FC<CategoryButtonsProps> = ({ filterOptions, onFilt
   return (
     <div className="flex justify-center mt-8">
       <div className="w-full md:w-1/2 px-4 pb-8 md:pb-0">
-        <h2 className="text-2xl font-bold mb-4 pb-8 text-center">PROJECTS</h2>
+        <h2 className="text-2xl font-bold mb-4 pb-8 text-center border-b-2 border-gray-400">PROJECTS</h2>
         <div className="flex justify-center">
           {filterOptions.map((option, index) => (
             <button
