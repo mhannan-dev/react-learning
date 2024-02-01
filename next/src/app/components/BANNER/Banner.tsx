@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaFacebookSquare, FaTwitterSquare, FaGithubSquare, FaLinkedin } from "react-icons/fa";
+import Line from '../UTILS/Line';
 import "./Banner.css";
 
 const Banner = () => {
@@ -16,10 +17,7 @@ const Banner = () => {
           <Button text="Portfolio" gradientFrom="from-fuchsia-600" gradientTo="to-purple-600" hoverFrom="hover:from-pink-600" hoverTo="hover:to-pink-700" />
           <Button text="Contact Me" gradientFrom="from-violet-600" gradientTo="to-indigo-600" hoverFrom="hover:from-blue-600" hoverTo="hover:to-blue-700" />
         </div>
-        
-        {/* Horizontal Line */}
-        <hr className="my-4 banner-hr"/>
-
+        <Line/>        
         {/* Social Links */}
         <div className="flex space-x-4 items-center">
           <p>Lets Connect</p>
